@@ -7,14 +7,14 @@ import { getFirestore, collection, addDoc, setDoc, doc } from "firebase/firestor
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "Obtener de la pagina de firebase",
-    authDomain: "Obtener de la pagina de firebase",
-    databaseURL: "Obtener de la pagina de firebase",
-    projectId: "Obtener de la pagina de firebase",
-    storageBucket: "Obtener de la pagina de firebase",
-    messagingSenderId: "Obtener de la pagina de firebase",
-    appId: "Obtener de la pagina de firebase",
-    measurementId: "Obtener de la pagina de firebase"
+    apiKey: "Obtener de la pagina",
+    authDomain: "Obtener de la pagina",
+    databaseURL: "Obtener de la pagina",
+    projectId: "Obtener de la pagina",
+    storageBucket: "Obtener de la pagina",
+    messagingSenderId: "Obtener de la pagina",
+    appId: "Obtener de la pagina",
+    measurementId: "Obtener de la pagina"
 };
 
 // Initialize Firebase
@@ -39,12 +39,13 @@ try {
         for (let j=1; j<=5; j++){
             
             let nuevo_libro = doc(db, "libros", `libro ${i}`);
-            
+            let titulo = `Titulo libro lorem ${i}`;
+
             let datos_libro =  {
-                titulo: `Titulo Lorem Ipsum ${i}`,
+                titulo: titulo,
                 autor: `Autor Lorem Ipsum ${i}`,
                 año: Math.floor(Math.random() * (2022 - 2010) + 2010),
-                imagen: "https://picsum.photos/300/450",
+                imagen: `https://via.placeholder.com/245x360/000000/FFFFFF/?text=${titulo.split(" ").join("%20")}`,
                 categoria: categorias[cat],
                 puntaje: Math.floor(Math.random() * (20 - 10) + 10)
             }
