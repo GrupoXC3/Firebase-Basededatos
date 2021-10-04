@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "firebase": "^9.1.0"
+    "firebase": "^9.1.0",
+    "lorem-ipsum": "^2.0.4"
   },
   "type": "module"
 }
